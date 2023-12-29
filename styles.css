@@ -1,0 +1,721 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@font-face {
+  font-family: 'Bespoke Slab', serif;
+  src: url('assets\fonts\BespokeSlab-Variable.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bespoke Slab Italic', serif;
+  src: url('assets\fonts\BespokeSlab-VariableItalic.ttf') format('truetype');
+}
+
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: ease-out all .2s;
+}
+
+/* The * selector targets every single element on the page. This is a universal selector in CSS.
+
+The margin: 0; rule sets the margin of all elements to 0. The margin is the space around an element, outside of any defined borders. By setting this to 0, we ensure that there are no default margins applied by the browser, which can vary between different browsers.
+
+The padding: 0; rule sets the padding of all elements to 0. The padding is the space between the content of the element and its border. By setting this to 0, we ensure that there are no default paddings applied by the browser, which can also vary between different browsers.
+
+The box-sizing: border-box; rule changes how the width and height of elements are calculated. By default, the width and height only include the content of the element, and any border or padding is added on top of that. This can make it difficult to size elements precisely, especially if they have variable content, padding, or borders. By setting box-sizing: border-box;, the width and height will include the content, padding, and border. This makes it much easier to predict the actual rendered size of an element.
+and lastly the transition: ease-out all .2s; rule sets the transition of all elements to ease-out all .2s. The transition property is used to animate changes in CSS properties. The ease-out value tells the browser to start the transition quickly, and then slow down towards the end. The all value tells the browser to transition all properties that are changed. */
+
+button {
+  padding: 0;
+  background: none;
+  border: none;
+  line-height: inherit;
+  cursor: pointer;
+}
+
+
+/* Global styles */
+body {
+  font-family: serif;
+  line-height: 125%;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+p {
+  font: 300 1rem/1.25 'Bespoke Slab', serif;
+  letter-spacing: -0.014rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.627rem;
+  line-height: 125%;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: 2.25rem;
+  line-height: 125%;
+  letter-spacing: -0.02475rem;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 125%;
+  letter-spacing: -0.02em;
+}
+
+h4 {
+  font-size: 1.872rem;
+  line-height: 125%;
+}
+
+h5 {
+  font-size: 1.625rem;
+  line-height: 125%;
+}
+
+h6 {
+  font-size: 1.4370rem;
+  line-height: 125%;
+}
+
+.button-text {
+  font-size: 1rem, sans-serif;
+  line-height: 125%;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+
+.subinfo-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  line-height: 125%;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--dark-gray);
+}
+
+/* DS color swatches */
+/* Primary colors */
+:root {
+  --primary: #19286B;
+  --secondary: #47DEFF;
+  --success: #28a745;
+  --danger: #DE1035;
+  --warning: #ffc107;
+  --info: #17a2b8;
+  --dark-gray: #666;
+  --black: #111111;
+  --light-gray: #F7F7F7;
+  --white: #FCFDFF;
+  --background-color: #EBECF2;
+  --stroke-gray: #DFE1E5;
+}
+
+/* Background colors */
+.bg-primary {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+.bg-success {
+  background-color: var(--success);
+  color: #fff;
+}
+
+.bg-danger {
+  background-color: var(--danger);
+  color: #fff;
+}
+
+.bg-warning {
+  background-color: var(--warning);
+  color: #fff;
+}
+
+.bg-info {
+  background-color: var(--info);
+  color: #fff;
+}
+
+.bg-light {
+  background-color: var(--light);
+  color: #333;
+}
+
+.bg-dark {
+  background-color: var(--dark);
+  color: #fff;
+}
+
+/* Text colors */
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-success {
+  color: var(--success);
+}
+
+.text-danger {
+  color: var(--danger);
+}
+
+.text-warning {
+  color: var(--warning);
+}
+
+.text-info {
+  color: var(--info);
+}
+
+.text-light {
+  color: var(--light);
+}
+
+.text-dark {
+  color: var(--dark);
+}
+
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+.top-nav {
+  font-family: sans-serif;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--stroke-gray);
+  display: flex;
+  padding: 16px 24px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.top-nav .container {
+  /* centered container for the main content that doesn't expand past 1416px  */
+  width: 100%;
+  max-width: 1416px;
+  display: inherit;
+  justify-content: space-between;
+  align-items: inherit;
+  align-items: inherit;
+}
+
+.top-nav ul {
+  /* unordered horizontal list in the top-nav*/
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 1rem;
+}
+
+li a {
+  /* The CSS code you've selected is targeting anchor (<a>) tags that are inside list item (<li>) elements, which are in turn inside an element with the class .top-nav.
+The text-decoration: none; rule is used to remove the underline that is typically displayed for anchor tags. 
+The color: inherit; rule is used to make the text color of the anchor tags the same as their parent element. The inherit value tells the browser to look up the CSS hierarchy to find the parent element's color and apply it to the current element.  */
+  text-decoration: none;
+  color: inherit;
+}
+
+.mobile-nav {
+  /* mobile nav container that is not shown initially and shown in the media-query*/
+  display: none;
+}
+
+/* buttons */
+
+.button-primary {
+  /* button for the primary page action */
+  background-color: var(--primary);
+  color: var(--white) !important;
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 125%;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+.button-secondary {
+  /* button for the secondary page action */
+  color: var(--primary);
+  background-color: var(--white);
+  border: 1px solid var(--primary);
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 125%;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+/* the main content */
+
+main {
+  width: 100%;
+  padding: 5rem 0rem;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+}
+
+
+/* This is where some spaghetti stuff is */
+
+.container {
+  /* centered container for the main content that doesn't expand past 1416px  */
+  display: flex;
+  width: 100%;
+  max-width: 1416px;
+  gap: 6rem;
+}
+
+main .container {
+  /* centered container for the main content that doesn't expand past 1416px  */
+  flex-direction: column;
+  max-width: 1544px;
+}
+
+/* Hero section */
+
+.hero {
+  /* hero section  */
+  max-height: 70vh;
+  display: flex;
+  min-width: 327px;
+  width: 100%;
+  max-width: 1416px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+.hero .bgimg-container {
+  /* position background image container inside hero section */
+  padding-left: 10%;
+}
+
+.hero .article {
+  padding: 0%;
+  position: absolute;
+  bottom: 10%;
+}
+
+/* reviews */
+
+.reviews {
+  /* reviews section */
+  display: flex;
+  padding: 1rem 0rem;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--background-color);
+}
+
+.carousel-container {
+  /* container for the carousel */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1416px;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.carousel-container>* {
+  /* container for the carousel children elements carousel-item*/
+  padding-left: 1.5rem;
+}
+
+.carousel {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  /* overflow: visible; */
+  overflow-x: scroll;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  max-width: 275px;
+  min-width: 275px;
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--stroke-gray);
+  border-radius: 2px;
+  background-color: var(--white);
+}
+
+.review {
+  /* review container */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+
+/* scrollbar hide */
+
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+.bgimg-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+}
+
+.bgimg-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.article {
+  /* article container */
+  max-width: 327px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  z-index: 1;
+  /* align-self: stretch; */
+}
+
+.article-text {
+  /* article text container inside the article element */
+  display: flex;
+  padding: 0.25rem 0.5rem;
+  flex-direction: column;
+  gap: 1rem;
+  align-self: start;
+  background-color: var(--white);
+}
+
+.nameless {
+  min-width: 327px;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-container {
+  /* article container */
+  display: flex;
+  gap: 1rem;
+  align-self: stretch;
+}
+
+/* custom layouts for sections */
+
+#Feedback .article-container {
+  padding-left: 10%;
+  justify-content: flex-end;
+}
+
+#Direkte .article-container {
+  padding: 0% 10%;
+  justify-content: center;
+}
+
+.sell .bgimg-container,
+#Direkte .bgimg-container {
+  margin-bottom: max(-5%, -12%);
+}
+
+.sell .article h2 {
+  color: var(--primary);
+}
+
+#Feedback .bgimg-container {
+  margin-bottom: max(-15%, -230px);
+}
+
+#Skræddersyet .bgimg-container {
+  margin-bottom: max(-5%, -100px);
+}
+
+#Skræddersyet img {
+  /* height: 40vh; */
+  padding-left: 15%;
+}
+
+/* footer */
+
+footer {
+  width: 100%;
+  background-color: var(--light-gray);
+  display: flex;
+  padding: 1rem 0rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container {
+  /* centered container for the main content that doesn't expand past 1416px  */
+  width: 100%;
+  max-width: 1416px;
+  display: inherit;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: inherit;
+  gap: 1.875rem;
+}
+
+.footer-container>* {
+  padding: 0rem 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/* Styles for the footer unordered list. */
+footer ul {
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  /* unordered horizontal list */
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: space-between;
+}
+
+
+
+/*  media queries for different screen sizes */
+@media screen and (max-width: 425px) {
+
+  * {
+    font-size: 14px;
+    /* downsizing the font so it's not too big on smaller screens */
+  }
+
+  .hero .article {
+    bottom: -32%;
+    /* moving the article up so it's not too far down on smaller screens */
+  }
+
+  .sell .article {
+    margin: 0rem 10%;
+  }
+
+  .hero,
+  .sell,
+  #Skræddersyet {
+    margin-bottom: 2rem;
+  }
+
+  .desktop-nav {
+    display: none;
+    /* hiding the desktop nav */
+  }
+
+  .mobile-nav {
+    display: block;
+    /* showing the mobile nav instead */
+  }
+}
+
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+
+  .hero .article {
+    /*position article container inside hero section */
+    max-width: 327px;
+    padding: 0%;
+    position: absolute;
+    bottom: -10%;
+  }
+
+  .sell .article {
+    margin: 0rem 10%;
+  }
+
+  .desktop-nav {
+    display: none;
+    /* hiding the desktop nav */
+  }
+
+  .mobile-nav {
+    display: block;
+    /* showing the mobile nav instead */
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .top-nav {
+    padding: 1rem 4rem;
+  }
+
+  .hero {
+    overflow: hidden;
+    max-width: 1416px;
+  }
+
+  main .container {
+    padding: 0rem 4rem;
+  }
+
+  .desktop-nav {
+    display: block;
+    /* showing the desktop nav */
+  }
+
+  .mobile-nav {
+    display: none;
+    /* hiding the mobile nav */
+  }
+
+  .sell#Kurser {
+    align-items: flex-end;
+    max-width: 70vw;
+  }
+
+
+  .sell#Workshop {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .nameless .bgimg-container {
+    overflow: hidden;
+    max-height: 475px;
+  }
+
+  .sell#Workshop .bgimg-container {
+    margin-left: -10%;
+  }
+}
+
+/*workshop*/
+
+.line-hr {
+  height: 3px;
+  background-color: #111111;
+}
+
+.grid-box {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.cta-container {
+  color: #0c1214;
+  text-decoration: none;
+}
+
+.span-cta {
+  width: 100%;
+  height: 80px;
+  flex-direction: row;
+  padding: 0 16px 0 16px;
+}
+
+.quote {
+  margin: 10%;
+}
+
+/*om*/
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.om-column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.om-row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*contact*/
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical
+    /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.call-box {
+  background-color: #efeee8;
+  width: 100%;
+  padding: 6%;
+  border-radius: 8px;
+
+}
