@@ -325,6 +325,11 @@ main .container {
   position: relative;
 }
 
+.hero-wrapper {
+  width: 100%;
+  padding: 4rem 6rem 0rem 6rem;
+}
+
 .hero .bgimg-container {
   /* position background image container inside hero section */
   padding-left: 10%;
@@ -647,20 +652,41 @@ footer ul {
 /*Under this comment, Karina's Spaghetti happens*/
 /*workshop*/
 
-.line-hr {
-  height: 3px;
-  background-color: #111111;
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 32px;
+  grid-row-gap: 16px;
 }
 
-.grid-box {
+.div1 {
+  grid-area: 1 / 1 / 5 / 3;
+}
+
+.four-blockgrid {
+  grid-area: 1 / 3 / 5 / 5;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
+}
+
+.line-hr {
+  height: 2px;
+  background-color: var(--dark-gray);
+}
+
+/* .grid-box {
   grid-column-start: 2;
   grid-row-start: 2;
-}
+} */
 
 .cta-container {
   width: 100%;
-  padding: 0 10% 10% 10%;
-  color: #0c1214;
+  /* padding: 0 10% 10% 10%; */
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -668,15 +694,7 @@ footer ul {
   width: 100%;
   height: 80px;
   flex-direction: row;
-  padding: 0 16px 0 16px;
-}
-
-.quote {
-  padding: 0 10% 10% 10%;
-}
-
-.FAQ {
-  padding: 0 10% 10% 10%;
+  /* padding: 0 16px 0 16px; */
 }
 
 /*om*/

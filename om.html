@@ -1,161 +1,187 @@
 <!DOCTYPE html>
 <html lang="da">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IT-Workshoppen | Kurser</title>
     <link rel="stylesheet" href="styles.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <!--header-->
     <header>
-        <nav class="top-nav">
-            <div class="container">
-                <a href="index.html" class="logo"><img src="assets\pictures\logo.svg" alt="logo" /></a>
-                <div class="desktop-nav">
-                    <ul>
-                        <li><a class="button-text" href="index.html">Forside</a></li>
-                        <li><a class="button-text" href="workshop.html">Workshop</a></li>
-                        <li><a class="button-text" href="kurser.html">Kurser</a></li>
-                        <li><a class="button-text" href="om.html">Om os</a></li>
-                        <li>
-                            <a class="button-primary" href="kontakt.html">Kontakt os</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="mobile-nav">
-                    <button class="button-secondary">Menu</button>
-                </div>
-            </div>
-        </nav>
+      <nav class="top-nav">
+        <div class="container">
+          <a href="index.html" class="logo"
+            ><img src="assets\pictures\logo.svg" alt="logo"
+          /></a>
+          <div class="desktop-nav">
+            <ul>
+              <li><a class="button-text" href="index.html">Forside</a></li>
+              <li><a class="button-text" href="workshop.html">Workshop</a></li>
+              <li><a class="button-text" href="kurser.html">Kurser</a></li>
+              <li><a class="button-text" href="om.html">Om os</a></li>
+              <li>
+                <a class="button-primary" href="kontakt.html">Kontakt os</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mobile-nav">
+            <button class="button-secondary">Menu</button>
+          </div>
+        </div>
+      </nav>
     </header>
     <!--main-->
     <main>
+      <div class="article">
+        <div class="article-text">
+          <!--change text-->
+          <h2>Hvem er IT-Workshoppen?</h2>
+          <p style="background-color: white">
+            A few words about what is depicted on the images or photos. Be
+            concise and creative.
+          </p>
+          <!--change text-->
+        </div>
+
+        <div class="om-row" style="align-content: flex-end">
+          <div class="om-column">
+            <img
+              src="assets/pictures/1693812246336.jpeg"
+              alt=""
+              style="width: 100%"
+            />
+          </div>
+          <div class="om-column">
+            <img
+              style="
+                width: 240px;
+                height: 300px;
+                object-fit: cover;
+                object-position: 40% 0;
+              "
+              src="assets/pictures/person-working-html-computer_23-2150038856.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+
         <div class="article">
-            <div class="article-text">
+          <div class="article-text">
+            <!--change text-->
+            <h3>Long title for a building block of your future website</h3>
+            <div style="display: grid; grid-template-columns: auto auto">
+              <div>
                 <!--change text-->
-                <h2>Hvem er IT-Workshoppen?</h2>
-                <p style="background-color: white;">
-                    A few words about what is depicted on the images or photos. Be concise and creative.
+                <h6>First Advantage</h6>
+                <p>
+                  Short text describing one of your product/service advanges.
+                  Try being creative.
                 </p>
                 <!--change text-->
-            </div>
+              </div>
 
-            <div class="om-row" style="align-content: flex-end;">
-                <div class="om-column">
-                    <img src="assets/pictures/1693812246336.jpeg" alt="" style="width:100%;">
-                </div>
-                <div class="om-column">
-                    <img style="width: 240px; height: 300px; object-fit: cover; object-position: 40% 0;"
-                        src="assets/pictures/person-working-html-computer_23-2150038856.jpg" alt="" style="width:100%">
-                </div>
-            </div>
-
-            <div class="article">
-                <div class="article-text">
-                    <!--change text-->
-                    <h3>Long title for a building block of your future website</h3>
-                    <div style="display: grid; grid-template-columns: auto auto">
-                        <div>
-                            <!--change text-->
-                            <h6>First Advantage</h6>
-                            <p>
-                                Short text describing one of your product/service advanges. Try being creative.
-                            </p>
-                            <!--change text-->
-                        </div>
-
-                        <div>
-                            <!--change text-->
-                            <h6>First Advantage</h6>
-                            <p>
-                                Short text describing one of your product/service advanges. Try being creative.
-                            </p>
-                            <!--change text-->
-                        </div>
-
-                        <div>
-                            <!--change text-->
-                            <h6>First Advantage</h6>
-                            <p>
-                                Short text describing one of your product/service advanges. Try being creative.
-                            </p>
-                            <!--change text-->
-                        </div>
-
-                        <div>
-                            <!--change text-->
-                            <h6>First Advantage</h6>
-                            <p>
-                                Short text describing one of your product/service advanges. Try being creative.
-                            </p>
-                            <!--change text-->
-                        </div>
-                    </div>
-                    <!--change text-->
-                </div>
-
-                <h6>Kontakt</h6>
-
-                <div class="article">
-                    <h2>Kom i kontakt med os</h2>
-                    <p>Aenean vel massa quis mauris vehicula lacinia. Integer in sapien duis sapien nunc.</p>
-                </div>
-            </div>
-
-            <div class="contact-container">
-                <form action="action_page.php">
-
-                    <label for="name">Name*</label>
-                    <input type="text" id="fname" name="name" placeholder="">
-
-                    <label for="email">Email*</label>
-                    <input type="text" id="lname" name="email" placeholder="">
-
-                    <label for="phone">Phone*</label>
-                    <input type="text" id="phone" name="phone" placeholder="">
-
-                    <label for="message">Message*</label>
-                    <textarea id="message" name="message" placeholder="Write something.."
-                        style="height:200px"></textarea>
-                </form>
-            </div>
-            <div>
-                <button class="button-primary">Send besked</button>
-            </div>
-
-            <div class="call-box">
-                <p>Giv os et opkald
-                    <br>
-                    <strong>(+45) 24287577</strong>
+              <div>
+                <!--change text-->
+                <h6>First Advantage</h6>
+                <p>
+                  Short text describing one of your product/service advanges.
+                  Try being creative.
                 </p>
-            </div>
+                <!--change text-->
+              </div>
 
-            <div class="call-box">
-                <p>Send os en email
-                    <br>
-                    <strong>stefan@itworkshoppen.dk</strong>
+              <div>
+                <!--change text-->
+                <h6>First Advantage</h6>
+                <p>
+                  Short text describing one of your product/service advanges.
+                  Try being creative.
                 </p>
+                <!--change text-->
+              </div>
+
+              <div>
+                <!--change text-->
+                <h6>First Advantage</h6>
+                <p>
+                  Short text describing one of your product/service advanges.
+                  Try being creative.
+                </p>
+                <!--change text-->
+              </div>
             </div>
+            <!--change text-->
+          </div>
+
+          <h6>Kontakt</h6>
+
+          <div class="article">
+            <h2>Kom i kontakt med os</h2>
+            <p>
+              Aenean vel massa quis mauris vehicula lacinia. Integer in sapien
+              duis sapien nunc.
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-container">
+          <form action="action_page.php">
+            <label for="name">Name*</label>
+            <input type="text" id="fname" name="name" placeholder="" />
+
+            <label for="email">Email*</label>
+            <input type="text" id="lname" name="email" placeholder="" />
+
+            <label for="phone">Phone*</label>
+            <input type="text" id="phone" name="phone" placeholder="" />
+
+            <label for="message">Message*</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Write something.."
+              style="height: 200px"
+            ></textarea>
+          </form>
+        </div>
+        <div>
+          <button class="button-primary">Send besked</button>
+        </div>
+
+        <div class="call-box">
+          <p>
+            Giv os et opkald
+            <br />
+            <strong>(+45) 24287577</strong>
+          </p>
+        </div>
+
+        <div class="call-box">
+          <p>
+            Send os en email
+            <br />
+            <strong>stefan@itworkshoppen.dk</strong>
+          </p>
+        </div>
+      </div>
     </main>
     <!--footer-->
     <footer>
-        <div class="footer-container">
-            <div class="line-nav">
-                <ul>
-                    <li><a class="button-text" href="index.html">Forside</a></li>
-                    <li><a class="button-text" href="workshop.html">Workshop</a></li>
-                    <li><a class="button-text" href="kurser.html">Kurser</a></li>
-                    <li><a class="button-text" href="om.html">Om os</a></li>
-                </ul>
-            </div>
-            <!-- line? -->
-            <div class="subinfo-text">(c) IT-workshop</div>
+      <div class="footer-container">
+        <div class="line-nav">
+          <ul>
+            <li><a class="button-text" href="index.html">Forside</a></li>
+            <li><a class="button-text" href="workshop.html">Workshop</a></li>
+            <li><a class="button-text" href="kurser.html">Kurser</a></li>
+            <li><a class="button-text" href="om.html">Om os</a></li>
+          </ul>
         </div>
+        <!-- line? -->
+        <div class="subinfo-text">(c) IT-workshop</div>
+      </div>
     </footer>
     <script src="scripts.js"></script>
-</body>
-
+  </body>
 </html>
