@@ -423,6 +423,8 @@ main .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  object-fit: cover;
+  /* max-height: 70dvh; */
   /* overflow: hidden; */
 }
 
@@ -640,6 +642,7 @@ footer ul {
   }
 
   .nameless .bgimg-container {
+    width: 100%;
     overflow: hidden;
     max-height: 475px;
   }
@@ -647,10 +650,17 @@ footer ul {
   .sell#Workshop .bgimg-container {
     margin-left: -10%;
   }
+
+  .bgimg-container {
+    width: 100%;
+    overflow: hidden;
+    max-height: 70dvh;
+  }
 }
 
 /*Under this comment, Karina's Spaghetti happens*/
 /*workshop*/
+/* create mobile container for normal sections that need padding */
 
 .parent {
   display: grid;
@@ -676,6 +686,8 @@ footer ul {
 .line-hr {
   height: 2px;
   background-color: var(--dark-gray);
+  border: none;
+  border-bottom: none;
 }
 
 /* .grid-box {
