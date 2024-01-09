@@ -327,7 +327,7 @@ main .container {
 
 .hero-wrapper {
   width: 100%;
-  padding: 4rem 6rem 0rem 6rem;
+  padding: 4rem 4rem 0rem 4rem;
 }
 
 .hero .bgimg-container {
@@ -740,6 +740,14 @@ footer ul {
 /*om*/
 
 /* Three image containers (use 25% for four, and 50% for two, etc) */
+.whois {
+  padding: 2rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
 .om-column {
   float: left;
   width: 50%;
