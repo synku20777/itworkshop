@@ -38,7 +38,16 @@
         <div class="whois">
           <!-- <div class="article"> -->
           <div class="om-row">
-            <div class="article-text">
+            <div
+              class="article-text"
+              style="
+                margin-bottom: -30%;
+                grid-row-start: 1;
+                grid-column-start: 1;
+                grid-row-end: 2;
+                grid-column-end: 2;
+              "
+            >
               <!--change text-->
               <h2>Hvem er IT-Workshoppen?</h2>
               <p>
@@ -47,10 +56,26 @@
               </p>
               <!--change text-->
             </div>
-            <div class="om-column">
+            <div
+              class="bgimg-container"
+              style="
+                grid-row-start: 2;
+                grid-column-start: 1;
+                grid-row-end: 5;
+                grid-column-end: 2;
+              "
+            >
               <img src="assets/pictures/1693812246336.jpeg" alt="" />
             </div>
-            <div class="om-column">
+            <div
+              class="bgimg-container"
+              style="
+                grid-row-start: 1;
+                grid-column-start: 2;
+                grid-row-end: 5;
+                grid-column-end: 3;
+              "
+            >
               <img
                 src="assets/pictures/person-working-html-computer_23-2150038856.jpg"
                 alt=""
@@ -153,20 +178,18 @@
           <button class="button-primary">Send besked</button>
         </div>
 
-        <div class="call-box">
-          <p>
-            Giv os et opkald
-            <br />
-            <strong>(+45) 24287577</strong>
-          </p>
-        </div>
+        <div class="callbox-container">
+          <div class="call-box">
+            <div class="subinfo-text">Giv os et opkald</div>
+            <div class="T7">(+45) 24287577</div>
+          </div>
 
-        <div class="call-box">
-          <p>
-            Send os en email
-            <br />
-            <strong>stefan@itworkshoppen.dk</strong>
-          </p>
+          <div class="call-box">
+            <div class="subinfo-text">Send os en email</div>
+            <a href="mailto:stefan@itworkshoppen.dk" class="T7"
+              >stefan@itworkshoppen.dk</a
+            >
+          </div>
         </div>
       </div>
       <!-- </div> -->
